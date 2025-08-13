@@ -1,0 +1,145 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #081528;
+  color: #e8f2ff;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 30px;
+}
+
+::placeholder {
+  color: #999;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+button {
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.categories {
+  background-color: #333;
+  color: white;
+}
+
+label {
+  color: white;
+  margin-right: 10px;
+}
+
+.js-div {
+  max-width: 600px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr; /* Left: medium, Center: bigger, Right: medium */
+  gap: 30px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 20px 0;
+}
+
+.right-container {
+  background: linear-gradient(
+    135deg,
+    rgba(26, 32, 44, 0.8) 0%,
+    rgba(45, 55, 72, 0.8) 100%
+  );
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(74, 85, 104, 0.3);
+}
+
+.left-container {
+  background: linear-gradient(
+    135deg,
+    rgba(26, 32, 44, 0.8) 0%,
+    rgba(45, 55, 72, 0.8) 100%
+  );
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(74, 85, 104, 0.3);
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(74, 85, 104, 0.3);
+  background: transparent;
+  border-left: none;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.expense-item:last-of-type {
+  border-bottom: none;
+}
+
+/* Left section with dot, category name, and percentage */
+.category-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Color dot styling - slightly larger for better visibility */
+.color-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px; /* Square with rounded corners like your image */
+  display: inline-block;
+  border: none;
+  flex-shrink: 0;
+}
+
+/* Category name styling - WHITE for dark theme */
+.category-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #e8f2ff;
+  margin-right: 8px;
+}
+
+/* Percentage styling - muted WHITE and in brackets */
+.percentage {
+  font-size: 14px;
+  font-weight: 400;
+  color: #94a3b8;
+}
+
+/* Amount on the right - bold WHITE and prominent */
+.category-amount {
+  font-size: 16px;
+  font-weight: 600;
+  color: #4ade80;
+  text-align: right;
+}

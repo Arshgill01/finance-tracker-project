@@ -1,0 +1,66 @@
+.budget-div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.monthly-budget,
+.amount,
+.date,
+.categories {
+  background-color: #1e3a5f;
+  color: #e8f2ff;
+  border: 2px solid #3b5998;
+  padding: 12px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  flex: 1;
+  min-width: 150px;
+}
+.monthly-budget:focus,
+.amount:focus,
+.date:focus,
+.categories:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.budgetDisplay {
+  max-width: 600px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.total-display,
+.budgetDisplay {
+  background-color: #444;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.budget-status {
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.over-budget {
+  background-color: #dc3545;
+  color: white;
+}
+
+.under-budget {
+  background-color: #28a745;
+  color: white;
+}
+.budgetDisplay:empty {
+  display: none;
+}

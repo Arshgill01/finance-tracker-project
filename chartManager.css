@@ -1,0 +1,17 @@
+.chart-container {
+  background: linear-gradient(
+    135deg,
+    rgba(26, 32, 44, 0.8) 0%,
+    rgba(45, 55, 72, 0.8) 100%
+  );
+
+  width: 400px;
+  height: 400px;
+  margin: 20px auto;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(74, 85, 104, 0.3);
+}
+.chart-container.hidden {
+  display: none !important;
+}

@@ -1,0 +1,76 @@
+.header-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.header-buttons div {
+  flex: 1;
+  padding: 24px 20px;
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d4a73 100%);
+  border: 1px solid #3b5998;
+  border-radius: 12px;
+  text-align: center;
+  color: #e8f2ff;
+  box-shadow: 0 4px 12px rgba(59, 89, 152, 0.15);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Individual button colors - moved after general styles and increased specificity */
+.header-buttons div.income-button {
+  background: linear-gradient(
+    135deg,
+    rgba(52, 211, 153, 0.2) 0%,
+    rgba(34, 197, 94, 0.15) 100%
+  ) !important;
+  border: 1px solid #10b981 !important;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25) !important;
+  backdrop-filter: blur(10px);
+}
+
+.header-buttons div.expense-button {
+  background: linear-gradient(
+    135deg,
+    rgba(239, 68, 68, 0.2) 0%,
+    rgba(220, 38, 127, 0.15) 100%
+  ) !important;
+  border: 1px solid #ef4444 !important;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.25) !important;
+  backdrop-filter: blur(10px);
+}
+
+.header-buttons div.balance-button {
+  background: linear-gradient(
+    135deg,
+    rgba(251, 191, 36, 0.2) 0%,
+    rgba(245, 158, 11, 0.15) 100%
+  ) !important;
+  border: 1px solid #f59e0b !important;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25) !important;
+  backdrop-filter: blur(10px);
+}
+
+.expense-div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.expense-item {
+  background-color: #333;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-left: 4px solid #dc3545;
+}

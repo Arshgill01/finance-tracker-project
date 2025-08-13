@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Finance Tracker</title>
+
+    <link rel="stylesheet" href="finance-tracker.css" />
+    <link rel="stylesheet" href="expenseManager.css" />
+    <link rel="stylesheet" href="chartManager.css" />
+    <link rel="stylesheet" href="budgetManager.css" />
+  </head>
+  <body>
+    <h1>Finance Tracker</h1>
+    <div class="header-buttons"></div>
+    <div class="main-container">
+      <div class="left-container">
+        <div class="budget-div">
+          <input
+            class="monthly-budget"
+            id="js-monthly-budget"
+            placeholder="Monthly Budget"
+          />
+          <button class="js-add-button">Add</button>
+        </div>
+        <div class="expense-div">
+          <input
+            class="amount"
+            id="expense-amount"
+            placeholder="How much did you spend?"
+          />
+          <input class="date" id="expense-date" type="date" />
+          <label for="Categories">Choose a Category: </label>
+          <select class="categories" id="expense-category" name="Categories">
+            <option>Electricity</option>
+            <option>Car insurance</option>
+            <option>Rent/Mortgage</option>
+            <option>Takeout</option>
+            <option>Groceries</option>
+            <option>Miscellaneous - Movie, Date, Medical Expenses</option>
+          </select>
+          <button class="js-add-button-2">Add</button>
+        </div>
+      </div>
+      <div class="center-container">
+        <div class="chart-container">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+
+      <div class="right-container">
+        <div class="js-div"></div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="finance-tracker.js" type="module"></script>
+  </body>
+</html>
