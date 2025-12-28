@@ -1,6 +1,7 @@
 import { budget, budgetSpent } from "./budgetManager.js";
 import { updateDisplay } from "./finance-tracker.js";
 import { updateChart } from "./chartManager.js";
+
 export let expenses = [];
 export let expense;
 export let date;
@@ -63,4 +64,13 @@ export function updateHeaderButtons() {
     `Balance: $${budget - totalAmount}`;
   document.querySelector(".expense-button").textContent =
     `Expenses: $${totalAmount}`;
+}
+
+export function deleteButtonUpdate(categoryName) {
+  expenses = expenses.filter((expense) => expense.category !== categoryName);
+  totalAmount = 0;
+   expenses.forEach((expense) => {
+    totalAmount += expense.amount;
+  });
+  setLocalStorage();
 }

@@ -1,4 +1,4 @@
-import { expenses } from "./expenseManager.js";
+import { deleteButtonUpdate, expenses, updateHeaderButtons } from "./expenseManager.js";
 import { budget } from "./budgetManager.js";
 import { updateChart } from "./chartManager.js";
 import { categoryLabels } from "./chartManager.js";
@@ -9,7 +9,7 @@ export function updateDisplay() {
   let htmlTotal = "";
   let categoryObject = {};
 
-  console.log(typeof categoryObject);
+
   // pushing each category to the categoryObject with it's respective amount.
   expenses.forEach((expense) => {
     if (categoryObject[expense.category]) {
@@ -73,20 +73,40 @@ export function updateDisplay() {
   }
 
   document.querySelector(".js-div").innerHTML = htmlTotal;
-  document.querySelector(".js-div").addEventListener("click", (event) => {
+  
+      // update the variables maybe, and then call the below 2 functions --
+      //TODO: update all the variables, -- Expense, Budget, and the Balance;
+
+      
+      
+     
+
+
+
+}
+
+document.querySelector(".js-div").addEventListener("click", (event) => {
     if (event.target.classList.contains("js-delete-button")) {
       const expenseItemToRemove = event.target.parentElement;
-      expenseItemToRemove.remove();
+      
 
       const categoryName =
         expenseItemToRemove.querySelector("span").textContent;
       if (categoryName) {
-        delete categoryObject[categoryName];
+        deleteButtonUpdate(categoryName);
+        updateDisplay();
+        updateHeaderButtons();
+        
+      
       }
-    }
-  });
-}
 
+    }
+
+})
+    
+
+// what is the if statement that is attatched with js-delete-button is actually deleting/removing?
+//
 //delete function: the not-so-efficient method
 /*
 function deleteButtonCategory(category) {
